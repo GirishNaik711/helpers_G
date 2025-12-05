@@ -1,6 +1,6 @@
 #venv
 scrape_web/venv/
 static_scrape/venv/
-
+TG/configs/
 static_scrape/images/
 TG/.env

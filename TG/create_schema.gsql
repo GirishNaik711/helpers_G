@@ -15,10 +15,19 @@ CREATE VERTEX Client (
 ) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
 
 CREATE VERTEX Assets (
-    PRIMARY_ID Assets_id STRING,
+    PRIMARY_ID asset_id STRING,
     name STRING,
-    ticker STRING,
-    industry STRING,
+    sector STRING,
+    asset_type STRING,
+    region STRING
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+-- NEW: each scraped page / chunk
+CREATE VERTEX Document (
+    PRIMARY_ID doc_id STRING,
+    url STRING,
+    title STRING,
+    text STRING,
     embedding LIST<DOUBLE>
 ) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
 
@@ -37,6 +46,6 @@ CREATE UNDIRECTED EDGE INVESTS_IN (
 )
 
 CREATE GRAPH FinancialAdvisor (
-    Advisor, Client, Assets,
+    Advisor, Client, Assets, Document,
     ADVISES, INVESTS_IN
 )

@@ -3,3 +3,4 @@ scrape_web/venv/
 static_scrape/venv/
 
 static_scrape/images/
+TG/.env

@@ -1,0 +1,42 @@
+CREATE VERTEX Advisor (
+    PRIMARY_ID advisor_id STRING,
+    name STRING,
+    email STRING,
+    phone STRING,
+    embedding LIST<DOUBLE>
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE VERTEX Client (
+    PRIMARY_ID client_id STRING,
+    name STRING,
+    email STRING,
+    phone STRING,
+    embedding LIST<DOUBLE>
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE VERTEX Assets (
+    PRIMARY_ID Assets_id STRING,
+    name STRING,
+    ticker STRING,
+    industry STRING,
+    embedding LIST<DOUBLE>
+) WITH PRIMARY_ID_AS_ATTRIBUTE="true"
+
+CREATE UNDIRECTED EDGE ADVISES (
+    FROM Advisor,
+    TO Client
+)
+
+CREATE UNDIRECTED EDGE INVESTS_IN (
+    FROM Client,
+    TO Assets,
+    investment_id STRING,
+    amount DOUBLE,
+    currency STRING,
+    invested_at STRING
+)
+
+CREATE GRAPH FinancialAdvisor (
+    Advisor, Client, Assets,
+    ADVISES, INVESTS_IN
+)

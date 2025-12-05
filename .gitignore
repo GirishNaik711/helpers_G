@@ -1,11 +1,5 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+#venv
+scrape_web/venv/
+static_scrape/venv/
 
-# Virtual environments
-.venv
-scrape_webs_docling\scrape_webs
+static_scrape/images/

@@ -1,4 +1,3 @@
-import docling_ext
 from utils.sitemaps import get_sitemap_urls
 from docling.document_converter import DocumentConverter
 from utils.clean_docs import extract_clean_text_generic

@@ -6,7 +6,7 @@ from urllib.parse import urljoin, urlparse
 from hashlib import sha1
 from collections import deque
 
-BASE_URL = "https://aws.amazon.com/bedrock/"
+BASE_URL = "https://aws.amazon.com/sagemaker/"
 DOMAIN = "aws.amazon.com"
 DOWNLOAD_IMAGES = True
 
@@ -44,12 +44,12 @@ def save_image(url):
 def parse(url, html):
     soup = BeautifulSoup(html, "lxml")
 
-    # extract text chunks
+    
     text = " ".join(
         t.get_text(strip=True) for t in soup.select("p, h1, h2, h3, section")
     )
 
-    # extract images
+    
     images = []
     for tag in soup.find_all("img"):
         src = tag.get("src") or tag.get("data-src")
@@ -59,7 +59,7 @@ def parse(url, html):
         local = save_image(img_url) if DOWNLOAD_IMAGES else None
         images.append({"url": img_url, "local": local, "alt": tag.get("alt")})
 
-    # extract internal links
+    
     links = []
     for a in soup.find_all("a", href=True):
         href = a["href"]
@@ -95,14 +95,14 @@ def crawl():
         data = parse(url, html)
         save_record(data)
 
-        # enqueue new internal links
+        
         for link in data["links"]:
             if link not in visited:
                 queue.append(link)
 
 
 def main():
-    # clear old output
+    
     if os.path.exists(OUT_FILE):
         os.remove(OUT_FILE)
 

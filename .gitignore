@@ -4,3 +4,4 @@ static_scrape/venv/
 TG/configs/
 static_scrape/images/
 TG/.env
+TG/venv

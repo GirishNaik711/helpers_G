@@ -16,7 +16,6 @@ print("Sample embedding values:", embedding[:5])
 
 TG_URL = "http://localhost"
 GRAPH_NAME = "FinancialAdvisor"
-AUTH_TOKEN = "ivemac9lptlmiam54il9oh91hub0hgoh"
 
 # Create TigerGraph connection
 conn = tg.TigerGraphConnection(

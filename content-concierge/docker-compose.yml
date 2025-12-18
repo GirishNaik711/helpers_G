@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: content_concierge_postgres
+    environment:
+      POSTGRES_DB: concierge
+      POSTGRES_USER: concierge
+      POSTGRES_PASSWORD: concierge
+    ports:
+      - "5432:5432"
+    volumes:
+      - concierge_pgdata:/var/lib/postgresql/data
+
+volumes:
+  concierge_pgdata:

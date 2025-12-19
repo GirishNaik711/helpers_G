@@ -1,1 +1,91 @@
 https://github.com/Benzinga/doc-site-mintlify/blob/main/openapi/analyst-insights.yaml
+
+output:
+{
+    "session_id": "0b7b0a59-d4df-49a7-a702-d2d808b84b86",
+    "user_id": "cust_001",
+    "created_at": "2025-12-19T11:18:38.091556+00:00",
+    "insights": [
+        {
+            "insight_id": "a1cf53c2-9a59-4f38-ad68-7716347bb28d",
+            "headline": "Apple's Strategic Acquisitions Enhance Growth Potential",
+            "explanation": "Recent commentary highlights Apple's ongoing commitment to innovation through strategic acquisitions, such as Mira Labs and WaveOne. These moves are seen as part of a broader strategy to enhance its ecosystem and drive future growth.",
+            "personal_relevance": "Understanding Apple's growth strategies may provide insights into the company's long-term potential, which could be relevant as you assess your investment in Apple.",
+            "sources": [
+                {
+                    "citation_id": "e8b6b27e-df64-4d06-bab2-78126e5469b9",
+                    "provider": "benzinga",
+                    "title": "AAPL — Reiterates / Strong Buy",
+                    "url": "benzinga://analyst/insights?symbol=AAPL",
+                    "published_at": "2023-06-22T18:30:00+00:00",
+                    "quote_span": null,
+                    "claim_ids": []
+                },
+                {
+                    "citation_id": "95914e18-d215-4619-8793-a012d3d3bcca",
+                    "provider": "benzinga",
+                    "title": "AAPL — Maintains / Strong Buy",
+                    "url": "benzinga://analyst/insights?symbol=AAPL",
+                    "published_at": "2023-01-03T18:30:00+00:00",
+                    "quote_span": null,
+                    "claim_ids": []
+                }
+            ],
+            "tone": "educational"
+        },
+        {
+            "insight_id": "209dab27-03ca-46df-9aab-1c35e88bf1cf",
+            "headline": "Strong Financial Projections Support Positive Outlook",
+            "explanation": "Analysts have noted that Apple's financial performance projections indicate significant growth, including a projected 25.31% increase in Net Operating Profit After Tax over the next year. This reflects the company's strong economic earnings power and operational efficiency.",
+            "personal_relevance": "These financial insights may help you evaluate the sustainability of your investment in Apple as you work towards your retirement goal.",
+            "sources": [
+                {
+                    "citation_id": "e8b6b27e-df64-4d06-bab2-78126e5469b9",
+                    "provider": "benzinga",
+                    "title": "AAPL — Reiterates / Strong Buy",
+                    "url": "benzinga://analyst/insights?symbol=AAPL",
+                    "published_at": "2023-06-22T18:30:00+00:00",
+                    "quote_span": null,
+                    "claim_ids": []
+                },
+                {
+                    "citation_id": "95914e18-d215-4619-8793-a012d3d3bcca",
+                    "provider": "benzinga",
+                    "title": "AAPL — Maintains / Strong Buy",
+                    "url": "benzinga://analyst/insights?symbol=AAPL",
+                    "published_at": "2023-01-03T18:30:00+00:00",
+                    "quote_span": null,
+                    "claim_ids": []
+                }
+            ],
+            "tone": "educational"
+        },
+        {
+            "insight_id": "0d8a41a0-f9ad-4c41-8241-944c9e18966d",
+            "headline": "Geopolitical Risks and Market Maturity Present Challenges",
+            "explanation": "Recent discussions have pointed out potential risks related to geopolitical issues in China and the maturing smartphone market. These factors could impact Apple's performance, particularly in a crucial market that accounts for a significant portion of its sales.",
+            "personal_relevance": "Being aware of these risks can assist you in making informed decisions about your portfolio, especially as you approach your retirement timeline.",
+            "sources": [
+                {
+                    "citation_id": "e8b6b27e-df64-4d06-bab2-78126e5469b9",
+                    "provider": "benzinga",
+                    "title": "AAPL — Reiterates / Strong Buy",
+                    "url": "benzinga://analyst/insights?symbol=AAPL",
+                    "published_at": "2023-06-22T18:30:00+00:00",
+                    "quote_span": null,
+                    "claim_ids": []
+                },
+                {
+                    "citation_id": "95914e18-d215-4619-8793-a012d3d3bcca",
+                    "provider": "benzinga",
+                    "title": "AAPL — Maintains / Strong Buy",
+                    "url": "benzinga://analyst/insights?symbol=AAPL",
+                    "published_at": "2023-01-03T18:30:00+00:00",
+                    "quote_span": null,
+                    "claim_ids": []
+                }
+            ],
+            "tone": "educational"
+        }
+    ]
+}

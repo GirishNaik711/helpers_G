@@ -30,8 +30,9 @@ class Settings(BaseSettings):
     mt_newswires_base_url: str | None = None
     mt_newswires_api_key: str | None = None
 
-    benzinga_base_url: str | None = None
+    benzinga_analyst_base_url: str = "https://api.benzinga.com/api/v1/analyst/insights"
     benzinga_api_key: str | None = None
+
 
 
     class Config:

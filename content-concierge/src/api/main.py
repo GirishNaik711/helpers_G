@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 
 from api.routes import insights as insights_routes
-from api.routes import qa as qa_routes
 from api.routes import users as users_routes
 from api.routes import debug as debug_routes
 
@@ -14,7 +13,6 @@ def create_app() -> FastAPI:
         return {"status": "ok"}
 
     app.include_router(insights_routes.router)
-    app.include_router(qa_routes.router)
     app.include_router(users_routes.router)
     app.include_router(debug_routes.router)
 

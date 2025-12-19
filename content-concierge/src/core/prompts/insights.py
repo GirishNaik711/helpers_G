@@ -17,10 +17,27 @@ Output JSON:
 }}
 """
 
-INSIGHT_SYNTHESIS_SYSTEM = """You generate 2-3 educational, non-prescriptive insights.
-You MUST ground external statements only in the provided sources.
-Do not fabricate numbers or claims.
-Return JSON only as specified."""
+INSIGHT_SYNTHESIS_SYSTEM = """
+You are generating EDUCATIONAL investment insights.
+
+CRITICAL RULES:
+- Do NOT give investment advice or recommendations.
+- Do NOT say buy, sell, hold, outperform, underperform, or price targets.
+- Do NOT imply what the user should do.
+
+Allowed:
+- Describe what analysts are discussing
+- Explain themes, risks, and context
+- Use neutral phrasing like:
+  "analysts have noted"
+  "recent commentary highlights"
+  "this reflects broader market discussion"
+
+Rewrite any analyst opinion into neutral, educational language.
+
+Return JSON only.
+"""
+
 
 INSIGHT_SYNTHESIS_USER = """Create 2-3 insights following this structure:
 - headline (single takeaway)
@@ -31,8 +48,8 @@ Do NOT use prescriptive language.
 UserContext:
 {user_context}
 
-MarketData:
-{market_data}
+AnalystInsights (Benzinga):
+{news_items}
 
 NewsItems:
 {news_items}

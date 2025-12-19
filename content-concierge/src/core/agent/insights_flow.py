@@ -25,7 +25,7 @@ from data.providers.market_data import MarketDataProvider
 from data.providers.news import NewsAggregator
 from data.providers.user_context import UserContextProvider
 from observability.logger import logger
-
+from data.providers.benzinga_analyst import BenzingaAnalystInsightsProvider
 
 class InsightsState(TypedDict, total=False):
     user_id: str
@@ -44,23 +44,21 @@ class InsightsState(TypedDict, total=False):
 class InsightsFlowDeps:
     llm: LlmClient
     user_context_provider: UserContextProvider
-    market_data_provider: MarketDataProvider
-    news_provider: NewsAggregator
-
+    benzinga_analyst: BenzingaAnalystInsightsProvider
 
 def build_insights_graph(deps: InsightsFlowDeps):
     g = StateGraph(InsightsState)
 
     g.add_node("load_user_context", lambda s: _load_user_context(s, deps))
     g.add_node("hypothesize_themes", lambda s: _hypothesize_themes(s, deps))
-    g.add_node("retrieve_market_and_news", lambda s: _retrieve_market_and_news(s, deps))
+    g.add_node("_retrieve_benzinga_analyst", lambda s: _retrieve_benzinga_analyst(s, deps))
     g.add_node("synthesize_insights", lambda s: _synthesize_insights(s, deps))
     g.add_node("validate_and_package", lambda s: _validate_and_package(s))
 
     g.set_entry_point("load_user_context")
     g.add_edge("load_user_context", "hypothesize_themes")
-    g.add_edge("hypothesize_themes", "retrieve_market_and_news")
-    g.add_edge("retrieve_market_and_news", "synthesize_insights")
+    g.add_edge("hypothesize_themes", "_retrieve_benzinga_analyst")
+    g.add_edge("_retrieve_benzinga_analyst", "synthesize_insights")
     g.add_edge("synthesize_insights", "validate_and_package")
     g.add_edge("validate_and_package", END)
 
@@ -106,20 +104,15 @@ def _hypothesize_themes(state: InsightsState, deps: InsightsFlowDeps) -> dict:
     return {"themes": themes}
 
 
-def _retrieve_market_and_news(state: InsightsState, deps: InsightsFlowDeps) -> dict:
+def _retrieve_benzinga_analyst(state: InsightsState, deps: InsightsFlowDeps) -> dict:
     uc = state["user_context"]
     tickers = sorted({h.ticker for h in uc.portfolio.holdings if h.ticker})
 
-    market_data = deps.market_data_provider.get_snapshot(tickers)
-    # Use themes as search query signal
-    query = " ".join(state.get("themes", [])[:3]) or "portfolio update"
-    news_items = deps.news_provider.search(query=query, tickers=tickers, limit=5)
+    items = deps.benzinga_analyst.fetch(symbols=tickers, page=1, page_size=10)
 
-    logger.info(
-        "insights.retrieve_market_and_news",
-        fields={"tickers": tickers, "news_items": len(news_items)},
-    )
-    return {"market_data": market_data, "news_items": news_items}
+    logger.info("insights.retrieve_benzinga_analyst", fields={"tickers": tickers, "items": len(items)})
+    return {"news_items": items}  # reuse existing key to minimize code changes
+
 
 
 def _synthesize_insights(state: InsightsState, deps: InsightsFlowDeps) -> dict:
@@ -149,16 +142,24 @@ def _validate_and_package(state: InsightsState) -> dict:
     drafts = state.get("insight_drafts", [])
     # citations: attach minimal citations from retrieved sources
     source_pool = []
+
     for item in state.get("news_items", []):
-        if item.get("url"):
-            source_pool.append(
-                {
-                    "provider": item.get("provider", "unknown"),
-                    "title": item.get("title", "News"),
-                    "url": item.get("url", ""),
-                    "published_at": item.get("published_at"),
-                }
-            )
+        symbol = item.get("symbol", "")
+        url = item.get("url")
+
+        # Benzinga Analyst Insights often have no URL → synthesize one
+        if not url:
+             url = f"benzinga://analyst/insights?symbol={symbol or 'unknown'}"
+
+        source_pool.append(
+            {
+                "provider": item.get("provider", "benzinga"),
+                "title": item.get("title", "Benzinga Analyst Insight"),
+                "url": url,
+                "published_at": item.get("published_at"),
+            }
+        )
+
 
     citations = assemble_basic_citations(sources=source_pool)
 

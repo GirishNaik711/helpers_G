@@ -5,3 +5,6 @@ pydantic-settings
 SQLAlchemy
 psycopg[binary]
 alembic
+langgraph
+openai
+ollama

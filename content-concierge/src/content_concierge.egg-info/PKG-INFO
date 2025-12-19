@@ -8,6 +8,9 @@ Requires-Dist: fastapi>=0.110
 Requires-Dist: uvicorn[standard]>=0.27
 Requires-Dist: pydantic>=2.6
 Requires-Dist: pydantic-settings>=2.2
+Requires-Dist: httpx>=0.27
+Requires-Dist: openai>=1.40
+Requires-Dist: langgraph>=0.2.0
 Requires-Dist: SQLAlchemy>=2.0
 Requires-Dist: psycopg[binary]>=3.1
 Requires-Dist: alembic>=1.13
@@ -28,3 +31,10 @@ source .venv/bin/activate
 
 pip install -e .
 uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
+
+# PODSTMAN:
+get session 
+curl -X POST http://localhost:8000/insights -H "Content-Type: application/json" -d "{\"user_id\":\"cust_001\"}"
+
+session Q&A 
+curl -X POST http://localhost:8000/sessions/<SESSION_ID>/ask -H "Content-Type: application/json" -d "{\"question\":\"How does AAPL relate to my portfolio?\",\"conversation\":[]}"

@@ -1,0 +1,1 @@
+https://github.com/Benzinga/doc-site-mintlify/blob/main/openapi/analyst-insights.yaml

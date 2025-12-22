@@ -1,180 +1,203 @@
 {
-    "session_id": "e6122af5-4eb3-4294-89e1-126e5d8edb13",
-    "user_id": "cust_001",
-    "created_at": "2025-12-22T05:28:35.029594+00:00",
-    "insights": [
+  "session_id": "voo-only-session",
+  "user_id": "cust_001",
+  "created_at": "2025-12-22T06:15:00.000000+00:00",
+  "insights": [
+    {
+      "insight_id": "voo-001",
+      "headline": "VOO provides broad exposure to U.S. large-cap equities through S&P 500 tracking",
+      "explanation": "Analyst and market commentary consistently describe VOO as a low-cost vehicle for gaining diversified exposure to the U.S. equity market. By tracking the S&P 500 index, VOO captures performance across major sectors including technology, healthcare, financials, and consumer discretionary, reflecting overall U.S. economic growth rather than single-company outcomes.",
+      "personal_relevance": "Your VOO holding serves as a core, diversified foundation in your portfolio, helping reduce single-stock risk compared to concentrated positions. For a long-term retirement objective, this broad exposure aligns with steady capital appreciation tied to overall market growth rather than individual company performance.",
+      "sources": [
         {
-            "insight_id": "1b93e7fc-5449-4392-be20-caaa0ef66bae",
-            "headline": "Analyst commentary highlights Apple's ecosystem expansion and services diversification as key growth drivers",
-            "explanation": "Recent analyst commentary notes that Apple's strategy of expanding its hardware and services ecosystem—including products like Apple Watch, iPad, and AirPods alongside subscription services—creates multiple revenue streams and increases user retention. Analysts have also discussed Apple's financial strength, including strong cash flow, dividend increases, and share repurchase programs, as factors reflecting operational efficiency and capital allocation.",
-            "personal_relevance": "Your AAPL holding represents approximately 2.4% of your brokerage portfolio and has generated $7,000 in unrealized gains. Understanding the themes analysts are discussing—ecosystem lock-in, services growth, and capital returns—provides context for how your holding may evolve. With your retirement goal in 2032, monitoring these longer-term structural trends in Apple's business model can inform your overall portfolio strategy.",
-            "sources": [
-                {
-                    "citation_id": "a0d22207-ff8b-463b-8621-cc603e133238",
-                    "provider": "benzinga",
-                    "title": "AAPL — Reiterates / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-06-22T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                },
-                {
-                    "citation_id": "f2f8a1a5-816f-4692-a3f4-1149be280f2a",
-                    "provider": "benzinga",
-                    "title": "AAPL — Maintains / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-01-03T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                }
-            ],
-            "tone": "educational"
-        },
-        {
-            "insight_id": "e97163b1-6537-42d3-b33d-b3f282407f3e",
-            "headline": "Market discussion reflects both growth opportunities and emerging risk factors for Apple",
-            "explanation": "Analyst commentary discusses Apple's innovation pipeline, including AI integration and potential new product categories, as potential growth avenues. However, recent commentary also highlights geopolitical uncertainties, particularly regarding China's regulatory environment and its impact on Apple's supply chain and market access, given that China represents approximately 20% of Apple's sales. The smartphone market maturity is also noted as a consideration in longer-term demand projections.",
-            "personal_relevance": "As an intermediate investor with a 7-year horizon to retirement, understanding both the growth catalysts and risk factors in your largest individual stock holding can help you assess portfolio concentration. Your AAPL position, combined with your VOO ETF holding (which also contains Apple exposure), means you have meaningful exposure to these themes.",
-            "sources": [
-                {
-                    "citation_id": "a0d22207-ff8b-463b-8621-cc603e133238",
-                    "provider": "benzinga",
-                    "title": "AAPL — Reiterates / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-06-22T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                },
-                {
-                    "citation_id": "f2f8a1a5-816f-4692-a3f4-1149be280f2a",
-                    "provider": "benzinga",
-                    "title": "AAPL — Maintains / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-01-03T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                }
-            ],
-            "tone": "educational"
-        },
-        {
-            "insight_id": "c03f59d6-6336-43cc-8264-5b8937caeab0",
-            "headline": "Analyst perspectives on Apple reflect varied outlooks on near-term versus structural value drivers",
-            "explanation": "Recent analyst commentary shows a range of perspectives: some emphasize near-term product cycles and upgrade momentum (such as iPhone 15 launch dynamics), while others focus on structural competitive advantages like ecosystem lock-in and high return on capital metrics. This reflects broader market discussion about whether Apple's valuation is driven more by cyclical product demand or durable competitive positioning.",
-            "personal_relevance": "With limited portfolio activity over the past 30 days and an inactivity flag, reviewing how different analysts frame Apple's value proposition—cyclical versus structural—may help clarify your own investment thesis. This context is particularly relevant given your intermediate experience level and your progress toward a $1.8M retirement target, where understanding the durability of your holdings matters.",
-            "sources": [
-                {
-                    "citation_id": "a0d22207-ff8b-463b-8621-cc603e133238",
-                    "provider": "benzinga",
-                    "title": "AAPL — Reiterates / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-06-22T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                },
-                {
-                    "citation_id": "f2f8a1a5-816f-4692-a3f4-1149be280f2a",
-                    "provider": "benzinga",
-                    "title": "AAPL — Maintains / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-01-03T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                }
-            ],
-            "tone": "educational"
+          "citation_id": "voo-src-001",
+          "provider": "vanguard",
+          "title": "VOO — S&P 500 ETF Overview",
+          "url": "vanguard://etf/profile?symbol=VOO",
+          "published_at": null,
+          "quote_span": null,
+          "claim_ids": []
         }
-    ]
+      ],
+      "tone": "educational"
+    },
+    {
+      "insight_id": "voo-002",
+      "headline": "Market discussions emphasize VOO’s role as a low-cost, long-term investment vehicle",
+      "explanation": "VOO is frequently highlighted for its low expense ratio and high liquidity, making it suitable for long-term buy-and-hold strategies. Market commentary often frames VOO as a benchmark ETF that closely reflects U.S. equity market returns, including both bull and bear market cycles.",
+      "personal_relevance": "As an investor with a multi-year horizon to retirement, holding VOO allows you to participate in long-term market compounding while minimizing fees. This positioning complements more active or concentrated holdings by anchoring your portfolio to overall market performance.",
+      "sources": [
+        {
+          "citation_id": "voo-src-002",
+          "provider": "morningstar",
+          "title": "VOO — Analyst ETF Report",
+          "url": "morningstar://etf/report?symbol=VOO",
+          "published_at": null,
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ],
+      "tone": "educational"
+    },
+    {
+      "insight_id": "voo-003",
+      "headline": "VOO embeds indirect exposure to major U.S. companies and sectors",
+      "explanation": "Through its S&P 500 composition, VOO includes weighted exposure to leading U.S. companies across technology, healthcare, energy, and financial services. Rather than relying on individual stock selection, performance is driven by aggregate earnings growth and economic expansion across sectors.",
+      "personal_relevance": "Your VOO position gives you indirect exposure to market leaders without increasing concentration risk. This can help balance volatility from individual stocks and supports a more resilient portfolio structure as you progress toward long-term financial goals.",
+      "sources": [
+        {
+          "citation_id": "voo-src-003",
+          "provider": "spglobal",
+          "title": "S&P 500 Index Methodology",
+          "url": "spglobal://indices/sp-500",
+          "published_at": null,
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ],
+      "tone": "educational"
+    }
+  ]
 }
 
-
-============================================================================================
+ "personal_relevance": "Your MSFT holding (80 units, $28,000 current value) is your second-largest individual stock position. The mixed analyst perspectives on growth rates and segment performance underscore the importance of understanding the different narratives around your holdings. Given your intermediate investment experience and low engagement over the past 30 days, reviewing how these varied outlooks fit into your retirement planning timeline may help clarify your portfolio positioning."
 
 {
-    "session_id": "1237d02f-ebfa-4a88-8899-100ab0b0ebdb",
-    "user_id": "cust_001",
-    "created_at": "2025-12-22T05:59:10.268178+00:00",
-    "insights": [
+    "insight_id": "4fcf4cb3-b222-43b6-a3b4-51d6e6f33efa",
+    "personal_relevance": "Your NVDA holding (40 units, $20,000 current value) represents a concentrated position in a company that analysts have been discussing as central to AI infrastructure trends. Given your 7-year retirement timeline and your current portfolio's heavy technology weighting, understanding the ongoing analyst discussion around NVIDIA's market dynamics may be relevant context for your overall asset allocation strategy. Your low engagement level (1 login in 30 days) suggests reviewing how concentrated positions align with your retirement goals."
+  },
+
+=======================================
+Diverse:
+INPUT:
+{
+    "user_id": "cust_002",
+    "holdings": [
         {
-            "insight_id": "f81032fb-65f6-45f3-9326-471fc1ec447a",
-            "headline": "Analyst commentary highlights Apple's ecosystem expansion and services diversification as key growth drivers",
-            "explanation": "Recent analyst commentary notes that Apple's strategic investments in hardware products (iPhone, Apple Watch, iPad, AirPods) combined with growing services revenue (Apple Pay, subscriptions, streaming) are creating multiple revenue streams. Analysts have observed that this ecosystem approach increases user retention and lifetime value, with services revenue showing consistent growth alongside hardware sales.",
-            "personal_relevance": "Your AAPL position of 120 shares represents a concentrated holding in your portfolio. Understanding the breadth of Apple's revenue sources—beyond just iPhone sales—provides context for how the company generates returns. With your retirement goal in 2032, tracking whether Apple's services growth materializes could inform how this holding contributes to your long-term wealth accumulation.",
-            "sources": [
-                {
-                    "citation_id": "fd02d6ea-276a-4a1b-a684-71c890596753",
-                    "provider": "benzinga",
-                    "title": "AAPL — Reiterates / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-06-22T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                },
-                {
-                    "citation_id": "3bfe19b7-9f38-4f92-9079-dbce08167469",
-                    "provider": "benzinga",
-                    "title": "AAPL — Maintains / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-01-03T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                }
-            ],
-            "tone": "educational"
+            "name": "Apple Inc.",
+            "ticker": "AAPL",
+            "category": "domestic_stocks",
+            "units": 120.0,
+            "current_market_value": 22000.0,
+            "cost_basis": 15000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": 150.0,
+            "dividend_yield_pct": 0.005,
+            "unrealized_gain_loss": 7000.0
         },
         {
-            "insight_id": "86319e23-d8ab-4935-9718-4723a0edea23",
-            "headline": "Market discussion reflects mixed perspectives on Apple's growth trajectory and geopolitical risks",
-            "explanation": "Analyst commentary reveals a spectrum of views on Apple's outlook. While multiple analysts have noted confidence in product innovation cycles and financial strength, recent commentary also highlights geopolitical uncertainties, particularly regarding China's regulatory environment and its impact on Apple's supply chain and market access. Analysts have noted that China represents approximately 20% of Apple's sales, making regional developments material to overall performance.",
-            "personal_relevance": "Your portfolio currently holds only two positions (AAPL and VOO), with AAPL representing about 2.4% of your total investable assets. Given your intermediate experience level and low recent engagement (1 login in 30 days), understanding these broader market discussions about Apple's risks and opportunities could inform whether your current allocation aligns with your retirement timeline and risk tolerance.",
-            "sources": [
-                {
-                    "citation_id": "fd02d6ea-276a-4a1b-a684-71c890596753",
-                    "provider": "benzinga",
-                    "title": "AAPL — Reiterates / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-06-22T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                },
-                {
-                    "citation_id": "3bfe19b7-9f38-4f92-9079-dbce08167469",
-                    "provider": "benzinga",
-                    "title": "AAPL — Maintains / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-01-03T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                }
-            ],
-            "tone": "educational"
+            "name": "Microsoft Corp.",
+            "ticker": "MSFT",
+            "category": "domestic_stocks",
+            "units": 80.0,
+            "current_market_value": 28000.0,
+            "cost_basis": 19000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": 180.0,
+            "dividend_yield_pct": 0.007,
+            "unrealized_gain_loss": 9000.0
         },
         {
-            "insight_id": "aea293e9-eb89-4c12-80f4-3aee9a8ed9cb",
-            "headline": "Analyst discussion emphasizes Apple's capital return programs and financial strength as supporting factors for shareholder value",
-            "explanation": "Recent analyst commentary notes that Apple's aggressive share repurchase programs and dividend increases reflect strong cash generation and balance sheet health. Analysts have highlighted that Apple's projected return on capital and economic profit growth support ongoing capital returns to shareholders. Your AAPL holding currently generates dividend income ($150 in recent payments), and analysts have noted this as part of Apple's broader shareholder value strategy.",
-            "personal_relevance": "Your AAPL position has dividend reinvestment enabled, meaning you're capturing the compounding effect of these dividend payments. With your retirement goal 7+ years away and 71% progress toward your $1.8M target, understanding how dividend-paying holdings like AAPL contribute to your wealth accumulation—versus growth-focused holdings like VOO—may be relevant to your overall strategy, especially given your limited recent portfolio engagement.",
-            "sources": [
-                {
-                    "citation_id": "fd02d6ea-276a-4a1b-a684-71c890596753",
-                    "provider": "benzinga",
-                    "title": "AAPL — Reiterates / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-06-22T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                },
-                {
-                    "citation_id": "3bfe19b7-9f38-4f92-9079-dbce08167469",
-                    "provider": "benzinga",
-                    "title": "AAPL — Maintains / Strong Buy",
-                    "url": "benzinga://analyst/insights?symbol=AAPL",
-                    "published_at": "2023-01-03T18:30:00+00:00",
-                    "quote_span": null,
-                    "claim_ids": []
-                }
-            ],
-            "tone": "educational"
+            "name": "NVIDIA Corp.",
+            "ticker": "NVDA",
+            "category": "domestic_stocks",
+            "units": 40.0,
+            "current_market_value": 20000.0,
+            "cost_basis": 9000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": false,
+            "recent_dividend_payments": null,
+            "dividend_yield_pct": null,
+            "unrealized_gain_loss": 11000.0
+        },
+        {
+            "name": "Vanguard S&P 500 ETF",
+            "ticker": "VOO",
+            "category": "etf",
+            "units": 300.0,
+            "current_market_value": 135000.0,
+            "cost_basis": 110000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": 400.0,
+            "dividend_yield_pct": 0.013,
+            "unrealized_gain_loss": 25000.0
+        },
+        {
+            "name": "Invesco QQQ Trust",
+            "ticker": "QQQ",
+            "category": "etf",
+            "units": 150.0,
+            "current_market_value": 60000.0,
+            "cost_basis": 48000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": null,
+            "dividend_yield_pct": null,
+            "unrealized_gain_loss": 12000.0
+        },
+        {
+            "name": "Vanguard Total International Stock ETF",
+            "ticker": "VXUS",
+            "category": "international_stocks",
+            "units": 400.0,
+            "current_market_value": 24000.0,
+            "cost_basis": 22000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": null,
+            "dividend_yield_pct": null,
+            "unrealized_gain_loss": 2000.0
+        },
+        {
+            "name": "Vanguard Total Bond Market ETF",
+            "ticker": "BND",
+            "category": "us_treasuries",
+            "units": 500.0,
+            "current_market_value": 38000.0,
+            "cost_basis": 40000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": null,
+            "dividend_yield_pct": null,
+            "unrealized_gain_loss": -2000.0
+        },
+        {
+            "name": "Vanguard Real Estate ETF",
+            "ticker": "VNQ",
+            "category": "reits",
+            "units": 200.0,
+            "current_market_value": 16000.0,
+            "cost_basis": 18000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": true,
+            "recent_dividend_payments": null,
+            "dividend_yield_pct": null,
+            "unrealized_gain_loss": -2000.0
+        },
+        {
+            "name": "SPDR Gold Shares",
+            "ticker": "GLD",
+            "category": "other",
+            "units": 100.0,
+            "current_market_value": 19000.0,
+            "cost_basis": 17000.0,
+            "acquisition_date": null,
+            "dividend_reinvestment_enabled": false,
+            "recent_dividend_payments": null,
+            "dividend_yield_pct": null,
+            "unrealized_gain_loss": 2000.0
         }
     ]
 }
+
+Ouput:
+
+ "personal_relevance": "Your MSFT holding (80 units, $28,000 current value) is your second-largest individual stock position. The mixed analyst perspectives on growth rates and segment performance underscore the importance of understanding the different narratives around your holdings. Given your intermediate investment experience and low engagement over the past 30 days, reviewing how these varied outlooks fit into your retirement planning timeline may help clarify your portfolio positioning."
+
+{
+    "insight_id": "4fcf4cb3-b222-43b6-a3b4-51d6e6f33efa",
+    "personal_relevance": "Your NVDA holding (40 units, $20,000 current value) represents a concentrated position in a company that analysts have been discussing as central to AI infrastructure trends. Given your 7-year retirement timeline and your current portfolio's heavy technology weighting, understanding the ongoing analyst discussion around NVIDIA's market dynamics may be relevant context for your overall asset allocation strategy. Your low engagement level (1 login in 30 days) suggests reviewing how concentrated positions align with your retirement goals."
+  },

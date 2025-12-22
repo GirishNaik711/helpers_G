@@ -13,11 +13,15 @@ class Settings(BaseSettings):
     database_url: str
 
     # LLM provider toggle
-    llm_provider: str = "openai"  # openai | ollama
+    llm_provider: str = "anthropic"  # openai | ollama
 
     # OpenAI
     openai_api_key: str | None = None
     llm_model: str = "gpt-4o-mini"
+    
+    anthropic_api_key: str | None = None
+    anthropic_model: str = "claude-haiku-4-5-20251001"
+
 
     # Ollama
     ollama_base_url: str = "http://localhost:11434"

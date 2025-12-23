@@ -1,3 +1,4 @@
+#src/api/main.py
 from fastapi import FastAPI
 
 from api.routes import insights as insights_routes

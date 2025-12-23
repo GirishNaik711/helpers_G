@@ -21,8 +21,6 @@ from core.prompts.insights import (
 )
 from core.schemas.insights import Insight, InsightSession
 from core.schemas.user_context import UserContext
-from data.providers.market_data import MarketDataProvider
-from data.providers.news import NewsAggregator
 from data.providers.user_context import UserContextProvider
 from observability.logger import logger
 from data.providers.benzinga_analyst import BenzingaAnalystInsightsProvider

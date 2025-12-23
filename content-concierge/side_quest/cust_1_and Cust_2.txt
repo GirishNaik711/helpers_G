@@ -1,0 +1,154 @@
+CUST_1:
+{
+  "session_id": "ac2d8530-fb17-4e40-963e-5eb4245e9c70",
+  "user_id": "cust_001",
+  "created_at": "2025-12-23T07:09:37.762502+00:00",
+  "insights": [
+    {
+      "insight_id": "6716c6b7-955d-4aa1-9850-57f157b9eead",
+      "headline": "Analyst commentary highlights Apple's ecosystem expansion and services diversification as key growth drivers",
+      "explanation": "Recent analyst commentary notes that Apple's strategy of expanding its hardware and services ecosystem—including products like Apple Watch, iPad, and AirPods alongside subscription services—creates multiple revenue streams and increases user retention. Analysts have also discussed Apple's financial strength, including strong cash flow, dividend increases, and share repurchase programs, as factors reflecting operational efficiency and capital allocation.",
+      "personal_relevance": "Your AAPL holding represents a concentrated position in a single stock within your $900k brokerage account. Understanding the themes analysts are discussing—ecosystem lock-in, services growth, and capital returns—provides context for how this holding may evolve. Given your 71% progress toward your 2032 retirement goal, monitoring the diversification and growth narratives around your holdings can inform your overall portfolio strategy.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "6dadd7b0-b5cf-45e6-bc5a-02e1df5dbbd5",
+          "provider": "benzinga",
+          "title": "AAPL — Reiterates / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-06-22T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "be7c03e7-b675-48a1-96c8-a0b18efea5f7",
+          "provider": "benzinga",
+          "title": "AAPL — Maintains / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-01-03T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    },
+    {
+      "insight_id": "6066d7b1-698c-4f45-8198-f25f2c432f05",
+      "headline": "Market discussion reflects both growth opportunities and geopolitical risks for Apple's business model",
+      "explanation": "Analyst commentary discusses Apple's innovation initiatives in AI, streaming content, and new product categories as potential growth avenues. Simultaneously, recent commentary has noted geopolitical uncertainties, particularly regarding China's regulatory environment and its impact on Apple's manufacturing and market presence, which accounts for approximately 20% of Apple's sales. These represent competing narratives in current market discussion.",
+      "personal_relevance": "Your portfolio is concentrated in two holdings (AAPL and VOO), with AAPL showing a $7,000 unrealized gain. Understanding the range of factors analysts are discussing—from innovation upside to geopolitical headwinds—can help you evaluate whether your current allocation aligns with your risk tolerance and retirement timeline of approximately 7 years.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "6dadd7b0-b5cf-45e6-bc5a-02e1df5dbbd5",
+          "provider": "benzinga",
+          "title": "AAPL — Reiterates / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-06-22T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "be7c03e7-b675-48a1-96c8-a0b18efea5f7",
+          "provider": "benzinga",
+          "title": "AAPL — Maintains / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-01-03T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    },
+    {
+      "insight_id": "c80a07f7-4354-496e-a9be-715015931526",
+      "headline": "Analyst perspectives on Apple vary, reflecting different views on valuation and market maturity",
+      "explanation": "Recent analyst commentary shows a spectrum of perspectives on Apple. Multiple analysts have discussed positive views on product innovation, financial performance, and ecosystem strength. However, some commentary has also noted the maturity of the smartphone market and questioned the returns on potential new ventures. This diversity of viewpoints reflects broader market discussion about Apple's valuation and growth prospects.",
+      "personal_relevance": "With limited portfolio activity (one login in the past 30 days) and an inactivity flag, reviewing the range of analyst perspectives on your AAPL holding may be useful context. Your VOO ETF provides broad market exposure, while AAPL represents a concentrated bet. Understanding different analytical viewpoints can support more informed portfolio decisions as you approach your retirement goal.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "6dadd7b0-b5cf-45e6-bc5a-02e1df5dbbd5",
+          "provider": "benzinga",
+          "title": "AAPL — Reiterates / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-06-22T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "be7c03e7-b675-48a1-96c8-a0b18efea5f7",
+          "provider": "benzinga",
+          "title": "AAPL — Maintains / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-01-03T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    }
+  ]
+}
+
+==========================================================================================================================================CUST_2
+{
+  "session_id": "3db52fc3-c774-4b33-9094-c32508fc975d",
+  "user_id": "cust_002",
+  "created_at": "2025-12-23T08:10:40.084754+00:00",
+  "insights": [
+    {
+      "insight_id": "fbe00c94-29fc-4534-a1a5-02f3717943a0",
+      "headline": "AI Infrastructure Demand Continues to Shape Technology Sector Commentary",
+      "explanation": "Recent analyst commentary highlights that companies positioned in AI and data center infrastructure—particularly those supplying GPU technology and cloud services—are receiving sustained attention from research firms. Multiple analysts have noted strong revenue growth in data center segments and expanding demand for AI-related products across enterprise and cloud service providers. This reflects broader market discussion around the transition toward AI-based systems and infrastructure buildout.",
+      "personal_relevance": "Your portfolio includes NVDA, MSFT, and AAPL, all of which feature prominently in analyst discussions about AI capabilities and infrastructure. Understanding these themes helps contextualize recent commentary about your holdings, though you have not made portfolio changes in recent months despite this ongoing market discussion.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "f5c5dc49-0d14-491a-8ca6-fd2d1c963b54",
+          "provider": "benzinga",
+          "title": "NVDA — Reiterates / Buy",
+          "url": "benzinga://analyst/insights?symbol=NVDA",
+          "published_at": "2025-11-19T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "54f49a4c-30a7-4fb9-b0d6-48d5dd833d87",
+          "provider": "benzinga",
+          "title": "NVDA — Maintains / Buy",
+          "url": "benzinga://analyst/insights?symbol=NVDA",
+          "published_at": "2025-11-19T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    },
+    {
+      "insight_id": "a3617a8a-b58c-400f-93d3-5695bc1674a0",
+      "headline": "Analyst Commentary Emphasizes Ecosystem Strength and Services Revenue Growth",
+      "explanation": "Analysts have noted that technology companies with diversified revenue streams—particularly those with high-margin services, installed user bases, and ecosystem lock-in—are receiving favorable discussion. Recent commentary highlights Apple's services expansion, Microsoft's cloud and AI services adoption, and the strategic value of customer retention through integrated platforms. This reflects market focus on recurring revenue and customer lifetime value as key business drivers.",
+      "personal_relevance": "Your holdings in AAPL and MSFT both feature these ecosystem characteristics that analysts discuss. Your portfolio also holds dividend-paying positions in these companies, which aligns with the services and recurring revenue themes analysts emphasize, though your engagement with portfolio activity has been limited recently.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "f5c5dc49-0d14-491a-8ca6-fd2d1c963b54",
+          "provider": "benzinga",
+          "title": "NVDA — Reiterates / Buy",
+          "url": "benzinga://analyst/insights?symbol=NVDA",
+          "published_at": "2025-11-19T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "54f49a4c-30a7-4fb9-b0d6-48d5dd833d87",
+          "provider": "benzinga",
+          "title": "NVDA — Maintains / Buy",
+          "url": "benzinga://analyst/insights?symbol=NVDA",
+          "published_at": "2025-11-19T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    },
+    {
+      "insight_id": "78eedbb8-36d6-443f-a47b-4c576d7b08c8",
+      "headline": "Market Discussion Reflects Mixed Outlooks Across Technology Segments",
+      "explanation": "While analyst commentary on AI infrastructure and data centers remains positive, recent discussion also highlights execution challenges and mixed growth across different business segments. For example, analysts have noted deceleration in certain cloud service components and varied guidance across quarters. This reflects broader market discussion acknowledging both opportunities and near-term uncertainties in the technology sector.",

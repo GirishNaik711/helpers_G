@@ -201,3 +201,94 @@ Ouput:
     "insight_id": "4fcf4cb3-b222-43b6-a3b4-51d6e6f33efa",
     "personal_relevance": "Your NVDA holding (40 units, $20,000 current value) represents a concentrated position in a company that analysts have been discussing as central to AI infrastructure trends. Given your 7-year retirement timeline and your current portfolio's heavy technology weighting, understanding the ongoing analyst discussion around NVIDIA's market dynamics may be relevant context for your overall asset allocation strategy. Your low engagement level (1 login in 30 days) suggests reviewing how concentrated positions align with your retirement goals."
   },
+
+===========================================================
+{
+  "session_id": "ac2d8530-fb17-4e40-963e-5eb4245e9c70",
+  "user_id": "cust_001",
+  "created_at": "2025-12-23T07:09:37.762502+00:00",
+  "insights": [
+    {
+      "insight_id": "6716c6b7-955d-4aa1-9850-57f157b9eead",
+      "headline": "Analyst commentary highlights Apple's ecosystem expansion and services diversification as key growth drivers",
+      "explanation": "Recent analyst commentary notes that Apple's strategy of expanding its hardware and services ecosystem—including products like Apple Watch, iPad, and AirPods alongside subscription services—creates multiple revenue streams and increases user retention. Analysts have also discussed Apple's financial strength, including strong cash flow, dividend increases, and share repurchase programs, as factors reflecting operational efficiency and capital allocation.",
+      "personal_relevance": "Your AAPL holding represents a concentrated position in a single stock within your $900k brokerage account. Understanding the themes analysts are discussing—ecosystem lock-in, services growth, and capital returns—provides context for how this holding may evolve. Given your 71% progress toward your 2032 retirement goal, monitoring the diversification and growth narratives around your holdings can inform your overall portfolio strategy.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "6dadd7b0-b5cf-45e6-bc5a-02e1df5dbbd5",
+          "provider": "benzinga",
+          "title": "AAPL — Reiterates / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-06-22T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "be7c03e7-b675-48a1-96c8-a0b18efea5f7",
+          "provider": "benzinga",
+          "title": "AAPL — Maintains / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-01-03T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    },
+    {
+      "insight_id": "6066d7b1-698c-4f45-8198-f25f2c432f05",
+      "headline": "Market discussion reflects both growth opportunities and geopolitical risks for Apple's business model",
+      "explanation": "Analyst commentary discusses Apple's innovation initiatives in AI, streaming content, and new product categories as potential growth avenues. Simultaneously, recent commentary has noted geopolitical uncertainties, particularly regarding China's regulatory environment and its impact on Apple's manufacturing and market presence, which accounts for approximately 20% of Apple's sales. These represent competing narratives in current market discussion.",
+      "personal_relevance": "Your portfolio is concentrated in two holdings (AAPL and VOO), with AAPL showing a $7,000 unrealized gain. Understanding the range of factors analysts are discussing—from innovation upside to geopolitical headwinds—can help you evaluate whether your current allocation aligns with your risk tolerance and retirement timeline of approximately 7 years.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "6dadd7b0-b5cf-45e6-bc5a-02e1df5dbbd5",
+          "provider": "benzinga",
+          "title": "AAPL — Reiterates / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-06-22T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "be7c03e7-b675-48a1-96c8-a0b18efea5f7",
+          "provider": "benzinga",
+          "title": "AAPL — Maintains / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-01-03T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    },
+    {
+      "insight_id": "c80a07f7-4354-496e-a9be-715015931526",
+      "headline": "Analyst perspectives on Apple vary, reflecting different views on valuation and market maturity",
+      "explanation": "Recent analyst commentary shows a spectrum of perspectives on Apple. Multiple analysts have discussed positive views on product innovation, financial performance, and ecosystem strength. However, some commentary has also noted the maturity of the smartphone market and questioned the returns on potential new ventures. This diversity of viewpoints reflects broader market discussion about Apple's valuation and growth prospects.",
+      "personal_relevance": "With limited portfolio activity (one login in the past 30 days) and an inactivity flag, reviewing the range of analyst perspectives on your AAPL holding may be useful context. Your VOO ETF provides broad market exposure, while AAPL represents a concentrated bet. Understanding different analytical viewpoints can support more informed portfolio decisions as you approach your retirement goal.",
+      "tone": "educational",
+      "sources": [
+        {
+          "citation_id": "6dadd7b0-b5cf-45e6-bc5a-02e1df5dbbd5",
+          "provider": "benzinga",
+          "title": "AAPL — Reiterates / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-06-22T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        },
+        {
+          "citation_id": "be7c03e7-b675-48a1-96c8-a0b18efea5f7",
+          "provider": "benzinga",
+          "title": "AAPL — Maintains / Strong Buy",
+          "url": "benzinga://analyst/insights?symbol=AAPL",
+          "published_at": "2023-01-03T18:30:00+00:00",
+          "quote_span": null,
+          "claim_ids": []
+        }
+      ]
+    }
+  ]
+}
+

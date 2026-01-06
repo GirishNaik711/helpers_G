@@ -1,0 +1,20 @@
+{
+  "customer_id": "C-ALEX-001",
+  "full_name": "Alex",
+  "age": 50,
+  "retirement_goal_date": 2032,
+  "preferred_insight_format": "text",
+  "total_investable_assets": 250000,
+  "portfolio_allocation": {
+    "equities_pct": 60,
+    "fixed_income_pct": 40,
+    "cash_pct": 0
+  },
+  "goals": [
+    {
+      "goal_type": "retirement",
+      "target_amount": 1200000,
+      "progress_to_goal_pct": 71
+    }
+  ]
+}

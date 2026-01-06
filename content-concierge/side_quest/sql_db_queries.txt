@@ -1,0 +1,45 @@
+SELECT
+  u.customer_id,
+  u.full_name,
+  u.date_of_birth,
+  u.retirement_goal_date,
+  u.preferred_notification_method,
+  u.investment_experience_level,
+
+  ws.total_investable_assets,
+  ws.checking_balance,
+  ws.savings_balance,
+  ws.brokerage_balance,
+  ws.external_accounts_linked,
+
+  hs.name AS holding_name,
+  hs.ticker,
+  hs.category,
+  hs.units,
+  hs.current_market_value,
+  hs.cost_basis,
+
+  g.goal_type,
+  g.target_amount,
+  g.progress_pct,
+  g.estimated_goal_date,
+
+  a.last_login_at,
+  a.login_frequency_30d,
+  a.engagement_score,
+  a.inactivity_flag,
+
+  p.preferred_insight_format
+FROM users u
+LEFT JOIN wealth_snapshots ws
+  ON ws.customer_id = u.customer_id
+LEFT JOIN holdings_snapshots hs
+  ON hs.customer_id = u.customer_id
+LEFT JOIN goals g
+  ON g.customer_id = u.customer_id
+LEFT JOIN activity_summary a
+  ON a.customer_id = u.customer_id
+LEFT JOIN preferences p
+  ON p.customer_id = u.customer_id
+WHERE u.customer_id = 'cust_002'
+ORDER BY ws.as_of DESC, hs.as_of DESC;

@@ -5,3 +5,4 @@ TG/configs/
 static_scrape/images/
 TG/.env
 TG/venv
+cc-new/.env

@@ -24,22 +24,25 @@ class OpenAIProvider(LLMProvider):
 
     def realize(self, payload: dict) -> dict:
         prompt = f"""
-You are writing educational investment insights.
+You generate investor-friendly insights for a wealth app.
 
-Rules:
-- Use ONLY the provided facts
-- No advice or calls to action
-- No new data
+Style:
+- Concise, confident, consumer-friendly.
+- Phrase anything action-ish as educational exploration (e.g., "Some investors explore...", "It may be useful to learn...").
+- No direct advice or calls to action (no "you should", no "buy/sell", no "% shift").
+- NEVER use these words anywhere: buy, sell, short, long.
+- If you would normally use them, replace with neutral phrasing like:
+  "increase exposure", "reduce exposure", "positioning", "market sentiment".
+- Use ONLY the facts provided. Do not invent numbers.
 
-Return ONLY valid JSON:
+Return ONLY JSON. The JSON strings must not contain the banned words.
+
+
 {{ "headline": "...", "explanation": "...", "personal_relevance": "..." }}
 
 Facts:
-{json.dumps(payload["facts"], indent=2)}
-
-Allowed claims:
-{json.dumps(payload["allowed_claims"], indent=2)}
-"""
+{json.dumps(payload.get("facts", []), indent=2)}
+""".strip()
 
         body = {
             "model": "gpt-4o-mini",

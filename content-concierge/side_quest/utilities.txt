@@ -3,46 +3,22 @@
   "as_of": "2026-01-05T13:30:00Z",
   "insights": [
     {
-      "insight_id": "eab1c8e9-ae56-47c7-ac62-fa2012250c84",
+      "insight_id": "afc6dc98-abda-41ac-876f-a4a6ea275ef9",
       "type": "GOAL_PROGRESS",
-      "headline": "Progress Toward Retirement Goal",
-      "explanation": "The user has achieved 71% of their retirement goal, indicating meaningful progress toward the target year of 2032.",
-      "personal_relevance": "This provides a clear snapshot of how current progress aligns with long-term retirement planning.",
+      "headline": "Retirement Goal Progress: 71% Achieved",
+      "explanation": "With a retirement goal set for 2032, reaching 71% progress reflects substantial advancement toward the stated objective. Total investable assets are approximately 1,050,000, forming the current basis for long-term planning.",
+      "personal_relevance": "Reviewing how portfolio components such as major holdings and dividend characteristics contribute to overall progress can provide helpful context when assessing long-term financial positioning.",
       "learn_more": null,
       "citations": []
     },
     {
-      "insight_id": "331d5ee2-aeec-498a-a6e5-0a84454a6bed",
+      "insight_id": "2caf2f0f-525a-4ab3-bff1-159165247733",
       "type": "MARKET_TREND",
-      "headline": "Analyst Commentary Highlights Market Outlook",
-      "explanation": "Analyst commentary from Tigress Financial offers perspective on the current market environment and expectations, reflecting broader sentiment rather than specific investment guidance.",
-      "personal_relevance": "Staying aware of analyst perspectives can help contextualize market movements and news without implying any required action.",
+      "headline": "Recent Market Context for AAPL",
+      "explanation": "Recent data sources include multiple analyst-related items from Benzinga and short-term price context from Alpha Vantage. Over the most recent sessions referenced, AAPL prices ranged between 267.26 and 273.76.",
+      "personal_relevance": "This information can help frame recent market activity and sentiment around AAPL without implying any specific action or expectation.",
       "learn_more": null,
       "citations": [
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-01-04T00:00:00Z"
-        },
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-02-03T00:00:00Z"
-        },
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-05-05T00:00:00Z"
-        },
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-06-05T00:00:00Z"
-        },
         {
           "source": "Benzinga",
           "title": "Benzinga analyst insight for AAPL",
@@ -50,28 +26,10 @@
           "published_at": "2023-06-23T00:00:00Z"
         },
         {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-08-17T00:00:00Z"
-        },
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-09-07T00:00:00Z"
-        },
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-09-12T00:00:00Z"
-        },
-        {
-          "source": "Benzinga",
-          "title": "Benzinga analyst insight for AAPL",
-          "url": "https://www.benzinga.com/",
-          "published_at": "2023-09-13T00:00:00Z"
+          "source": "Alpha Vantage",
+          "title": "Alpha Vantage TIME_SERIES_DAILY for AAPL",
+          "url": "https://www.alphavantage.co/documentation/",
+          "published_at": null
         }
       ]
     }
@@ -79,6 +37,6 @@
   "audit": {
     "model": "openai",
     "providers_used": ["benzinga", "alphavantage"],
-    "trace_id": "trace_d4cbe025-f094-4271-a3f2-2d8e171e5027"
+    "trace_id": "trace_b0d8586f-5594-4a21-9d1e-8c0a1ead4243"
   }
 }

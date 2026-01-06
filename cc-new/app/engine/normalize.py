@@ -1,7 +1,8 @@
-#app/engine/normalize.py
+# app/engine/normalize.py
+
 from __future__ import annotations
 from datetime import date
-from typing import Dict, Any
+from typing import Any, Dict
 
 from app.api.schemas import PipelinePayload
 
@@ -15,9 +16,8 @@ def _calculate_age(dob: date | None) -> int | None:
 
 def normalize_pipeline_payload(payload: PipelinePayload) -> Dict[str, Any]:
     """
-    Converts pipeline payload → normalized context used by insight engine
+    Converts pipeline payload -> normalized context used by the insight engine.
     """
-
     tickers = [h.ticker for h in payload.holdings_snapshots]
 
     total_value = sum(h.current_market_value for h in payload.holdings_snapshots)
@@ -28,14 +28,13 @@ def normalize_pipeline_payload(payload: PipelinePayload) -> Dict[str, Any]:
     )
 
     dividend_weighted_yield = (
-        sum(h.current_market_value * h.dividend_yield_pct for h in payload.holdings_snapshots)
-        / total_value
+        sum(h.current_market_value * h.dividend_yield_pct for h in payload.holdings_snapshots) / total_value
         if total_value > 0
         else 0
     )
 
     retirement_goal = next(
-        (g for g in payload.goals if g.goal_type.lower() == "retirement"),
+        (g for g in payload.goals if (g.goal_type or "").lower() == "retirement"),
         None,
     )
 
@@ -58,6 +57,8 @@ def normalize_pipeline_payload(payload: PipelinePayload) -> Dict[str, Any]:
             }
             for h in top_holdings[:5]
         ],
+        "holdings_total_value": total_value,
+        "total_investable_assets": payload.wealth_snapshot.total_investable_assets,
         "dividend_profile": {
             "weighted_yield": dividend_weighted_yield,
             "has_dividends": dividend_weighted_yield > 0,

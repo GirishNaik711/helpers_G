@@ -22,14 +22,9 @@ from app.providers.registry import resolve_providers
 
 
 def generate_insights(req: GenerateInsightsRequest) -> GenerateInsightsResponse:
-    # ----------------------------
-    # Normalize
-    # ----------------------------
+    
     context = normalize_pipeline_payload(req.payload)
 
-    # ----------------------------
-    # Providers (holdings-driven)
-    # ----------------------------
     provider_payloads = []
     providers = resolve_providers(req.options.market_providers)
 
@@ -45,18 +40,13 @@ def generate_insights(req: GenerateInsightsRequest) -> GenerateInsightsResponse:
             continue
         provider_payloads.append(provider.fetch(preq))
 
-    # ----------------------------
-    # Build signal bundles (A+B)
-    # ----------------------------
+    
     bundles = [build_goal_portfolio_signals(context)]
 
     market_bundle = build_market_trend_signals(provider_payloads, context)
     if market_bundle:
         bundles.append(market_bundle)
 
-    # ----------------------------
-    # LLM realization (C)
-    # ----------------------------
     llm = resolve_llm(req.options.llm_provider)
     insights: List[Insight] = []
 
@@ -101,9 +91,6 @@ def generate_insights(req: GenerateInsightsRequest) -> GenerateInsightsResponse:
             )
         )
 
-    # ----------------------------
-    # Response
-    # ----------------------------
     return GenerateInsightsResponse(
         customer_id=req.payload.user.customer_id,
         as_of=req.payload.wealth_snapshot.as_of,

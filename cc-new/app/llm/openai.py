@@ -15,6 +15,8 @@ class OpenAIProvider(LLMProvider):
 
     def __init__(self) -> None:
         self.api_key = os.getenv("OPENAI_API_KEY")
+        if not self.api_key:
+            raise RuntimeError("OPENAI_API_KEY is not set")
 
     def _headers(self):
         return {
@@ -48,6 +50,7 @@ Facts:
             "model": "gpt-4o-mini",
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.2,
+            "response_format": {"type": "json_object"},
         }
 
         r = httpx.post(self.base_url, headers=self._headers(), json=body, timeout=20)

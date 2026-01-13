@@ -8,9 +8,6 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field, ConfigDict, HttpUrl
 
-
-
-
 class RiskMode(str, Enum):
     strict = "strict"
 
@@ -21,11 +18,9 @@ class InsightType(str, Enum):
     PORTFOLIO_COMPOSITION = "PORTFOLIO_COMPOSITION"
 
 
-
-
 class Citation(BaseModel):
     model_config = ConfigDict(extra="forbid")
-
+    
     source: str
     title: str
     url: HttpUrl
@@ -34,7 +29,7 @@ class Citation(BaseModel):
 
 class LearnMore(BaseModel):
     model_config = ConfigDict(extra="forbid")
-
+    
     title: str
     url: HttpUrl
 
@@ -150,21 +145,8 @@ class PipelinePayload(BaseModel):
     activity_events: List[Dict[str, Any]]
 
 
-
-
-class GenerateInsightsOptions(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    count: int = Field(default=3, ge=1, le=3)
-    llm_provider: str = "openai"
-    market_providers: list[str] = Field(default_factory=lambda: ["alphavantage", "benzinga"])
-    risk_mode: RiskMode = RiskMode.strict
-    preferred_format: str = "text"
-
-
 class GenerateInsightsRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     session_id: str
     payload: PipelinePayload
-    options: GenerateInsightsOptions = Field(default_factory=GenerateInsightsOptions)

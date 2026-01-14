@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
 
     # LLM toggle
-    llm_provider: str = "openai"  # anthropic | openai | bedrock
+    llm_provider: str = "anthropic"  # anthropic | openai | bedrock
 
     # Keys
     anthropic_api_key: str | None = None
@@ -26,11 +26,11 @@ class Settings(BaseSettings):
 
     # Bedrock
     aws_region: str | None = None
-    bedrock_model_id: str = "anthropic.claude-3-sonnet-20240229-v1:0"
+    bedrock_model_id: str = "claude-sonnet-4-5-20250929"
     
     insights_count: int = 3 
 
-    default_llm_provider: str = "openai" 
+    default_llm_provider: str = "anthropic" 
 
     default_market_providers: str = "benzinga,alphavantage"
 

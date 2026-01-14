@@ -57,30 +57,28 @@ class AnthropicProvider(LLMProvider):
 
     def realize(self, payload: dict) -> dict:
         prompt = f"""
-You are writing educational investment insights.
+You generate investor-friendly insights for a wealth app.
 
-Rules:
-- Use ONLY the provided facts.
-- Treat analyst ratings/price targets as market context, not recommendations.
-- Phrase any potentially advisory idea as educational exploration (no "you should", no "buy/sell", no "shift X%").
-- Do NOT add new data or claims.
+Style:
+- Concise, confident, consumer-friendly.
+- Phrase anything action-ish as educational exploration (e.g., "Some investors explore...", "It may be useful to learn...").
+- No direct advice or calls to action (no "you should", no "buy/sell", no "% shift").
+- NEVER use these words anywhere: buy, sell, short, long.
+- If you would normally use them, replace with neutral phrasing like:
+  "increase exposure", "reduce exposure", "positioning", "market sentiment".
+- Use ONLY the facts provided. Do not invent numbers.
 
-Return ONLY valid JSON (no markdown fences):
-{{
-  "headline": "...",
-  "explanation": "...",
-  "personal_relevance": "..."
-}}
+Return ONLY JSON. The JSON strings must not contain the banned words.
+
+
+{{ "headline": "...", "explanation": "...", "personal_relevance": "..." }}
 
 Facts:
 {json.dumps(payload.get("facts", []), indent=2)}
-
-Allowed claims:
-{json.dumps(payload.get("allowed_claims", []), indent=2)}
 """.strip()
 
         body = {
-            "model": "claude-3-5-sonnet-20240620",
+            "model": "claude-sonnet-4-5-20250929",
             "max_tokens": 300,
             "messages": [{"role": "user", "content": prompt}],
         }
@@ -101,15 +99,9 @@ Allowed claims:
 
     def judge(self, text: str) -> dict:
         prompt = f"""
-You are a compliance reviewer for a financial education product.
+Classify the text as PASS or BLOCK for investment advice.
 
-Rules:
-- Educational explanations are allowed.
-- Any advice or call to action is NOT allowed.
-- Even soft suggestions are NOT allowed (e.g., "consider shifting", "you may want to").
-- Analyst ratings/price targets are allowed only as market context, not recommendations.
-
-Return ONLY valid JSON (no markdown fences):
+Return ONLY JSON:
 {{ "verdict": "PASS" | "BLOCK", "reason": "..." }}
 
 Text:
@@ -117,7 +109,7 @@ Text:
 """.strip()
 
         body = {
-            "model": "claude-3-5-sonnet-20240620",
+            "model": "claude-sonnet-4-5-20250929",
             "max_tokens": 120,
             "messages": [{"role": "user", "content": prompt}],
         }

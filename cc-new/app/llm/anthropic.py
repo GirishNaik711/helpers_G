@@ -99,9 +99,15 @@ Facts:
 
     def judge(self, text: str) -> dict:
         prompt = f"""
-Classify the text as PASS or BLOCK for investment advice.
+You are a compliance reviewer for a financial education product.
 
-Return ONLY JSON:
+Rules:
+- Educational explanations are allowed.
+- Any advice or call to action is NOT allowed.
+- Even soft suggestions are NOT allowed (e.g., "consider shifting", "you may want to").
+- Analyst ratings/price targets are allowed only as market context, not recommendations.
+
+Return ONLY valid JSON (no markdown fences):
 {{ "verdict": "PASS" | "BLOCK", "reason": "..." }}
 
 Text:

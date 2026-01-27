@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
 
     # LLM toggle
-    llm_provider: str = "anthropic"  # anthropic | openai | bedrock
+    llm_provider: str = "openai"  # anthropic | openai | bedrock
 
     # Keys
     anthropic_api_key: str | None = None
@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     
     insights_count: int = 3 
 
-    default_llm_provider: str = "anthropic" 
+    default_llm_provider: str = "openai" 
 
     default_market_providers: str = "benzinga,alphavantage"
 

@@ -8,8 +8,49 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field, ConfigDict, HttpUrl
 
+
+
+class Tier(str, Enum):
+    UNDER_250K = "UNDER_250K"
+    FROM_250K_TO_1M = "FROM_250K_TO_1M"
+    OVER_1M = "OVER_1M"
+
+
+class Archetype(str, Enum):
+    PROSPECT = "PROSPECT"
+    INACTIVE = "INACTIVE"
+    EVERYDAY = "EVERYDAY"
+    ADVANCED = "ADVANCED"
+    
 class RiskMode(str, Enum):
     strict = "strict"
+
+class Placement(str, Enum):
+    INVESTMENT_DASHBOARD = "INVESTMENT_DASHBOARD"
+    POSITIONS = "POSITIONS"
+    PERFORMANCE = "PERFORMANCE"
+
+
+class Trigger(str, Enum):
+    APP_OPEN = "APP_OPEN"
+    TAB_VIEW = "TAB_VIEW"
+    HOVER_TICKER = "HOVER_TICKER"
+    DWELL_NO_ACTION = "DWELL_NO_ACTION"
+    REPEAT_VIEW = "REPEAT_VIEW"
+
+
+class InsightScope(str, Enum):
+    PORTFOLIO = "PORTFOLIO"
+    TICKER = "TICKER"
+
+
+class RequestContext(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    placement: Placement
+    trigger: Trigger
+    focus_ticker: Optional[str] = None
+    recent_headlines: List[str] = Field(default_factory=list)
 
 
 class InsightType(str, Enum):
@@ -42,9 +83,16 @@ class Insight(BaseModel):
     headline: str
     explanation: str
     personal_relevance: str
+
+   
+    placement: Placement
+    trigger: Trigger
+    scope: InsightScope
+    ticker: Optional[str] = None
+    priority: int = 0
+
     learn_more: Optional[LearnMore] = None
     citations: list[Citation] = Field(default_factory=list)
-
 
 class Audit(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -124,7 +172,6 @@ class ActivitySummary(BaseModel):
     last_login_at: datetime
     login_frequency_30d: int
     engagement_score: float
-    inactivity_flag: bool
 
 
 class Preferences(BaseModel):
@@ -149,4 +196,5 @@ class GenerateInsightsRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     session_id: str
+    request_context: RequestContext
     payload: PipelinePayload

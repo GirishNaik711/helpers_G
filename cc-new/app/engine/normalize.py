@@ -3,9 +3,23 @@
 from __future__ import annotations
 from datetime import date
 from typing import Any, Dict
-
+from datetime import datetime
 from app.api.schemas import PipelinePayload
 
+
+def _compute_inactivity_flag(last_login_at: datetime | None) -> bool:
+    """Returns True if last login > 6 months ago"""
+    if not last_login_at:
+        return True
+    from datetime import timedelta, timezone
+    
+    # Make both timezone-aware for comparison
+    now = datetime.now(timezone.utc)
+    if last_login_at.tzinfo is None:
+        last_login_at = last_login_at.replace(tzinfo=timezone.utc)
+    
+    six_months_ago = now - timedelta(days=180)
+    return last_login_at < six_months_ago
 
 def _calculate_age(dob: date | None) -> int | None:
     if not dob:
@@ -13,6 +27,23 @@ def _calculate_age(dob: date | None) -> int | None:
     today = date.today()
     return today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
 
+def _tier(total_assets: float | None) -> str | None:
+    if total_assets is None:
+        return None
+    if total_assets < 250_000:
+        return "UNDER_250K"
+    if total_assets < 1_000_000:
+        return "FROM_250K_TO_1M"
+    return "OVER_1M"
+
+def _archetype(payload: PipelinePayload) -> str:
+    
+    
+    lvl = (payload.user.investment_experience_level or "").strip().lower()
+    if lvl =="advanced":
+        return "ADVANCED"
+    
+    return "EVERYDAY"
 
 def normalize_pipeline_payload(payload: PipelinePayload) -> Dict[str, Any]:
     """
@@ -63,6 +94,10 @@ def normalize_pipeline_payload(payload: PipelinePayload) -> Dict[str, Any]:
             "weighted_yield": dividend_weighted_yield,
             "has_dividends": dividend_weighted_yield > 0,
         },
-        "inactivity_flag": payload.activity_summary.inactivity_flag,
+        "inactivity_flag": _compute_inactivity_flag(payload.activity_summary.last_login_at),
         "preferred_format": payload.preferences.preferred_insight_format,
-    }
+        "tier": _tier(payload.wealth_snapshot.total_investable_assets),
+        "archetype": _archetype(payload),
+        "holdings_count": len(payload.holdings_snapshots),
+        "has_positions": len(payload.holdings_snapshots) > 0,
+        }

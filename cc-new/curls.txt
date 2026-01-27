@@ -68,11 +68,4 @@ curl -X POST "http://127.0.0.1:8000/v1/insights/generate" \
     }
 }'
 
-Drake = noY_kcQlsHH3cOCwn5jOTYe0B-43-
 
-
-Logan = uKbUkvkcIF5ed7ADWvB53fNPhZuoi5oNGwoSr5LeAuqLMU6-
-
-
-
-Jake = qmkb3vtAw-rhcdtQAA

@@ -1,0 +1,10 @@
+HL|Hecla Mining|+8.4%|strong recent momentum
+SPIR|Spire Global|+6.1%|strong recent momentum (can be more volatile)
+BARK|BARK|+5.9%|strong recent momentum (can be more volatile)
+AAPL|Apple Inc.|+3.5%|solid performer
+MSFT|Microsoft Corp.|+2.9%|solid momentum
+NVDA|NVIDIA Corp.|+7.2%|leading sector performer
+GOOGL|Alphabet Inc.|+2.1%|steady performer
+AMZN|Amazon.com Inc.|+1.8%|steady recovery
+TSLA|Tesla Inc.|+4.0%|volatile but strong moves
+META|Meta Platforms|+2.5%|steady performer

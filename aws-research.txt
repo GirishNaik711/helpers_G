@@ -1,0 +1,43 @@
+import json
+import jwt
+
+def lambda_handler(event, context):
+    # Extract JWT token
+    token = event['authorizationToken']
+    
+    # Decode JWT (without verification for custom JWTs, or with key if needed)
+    try:
+        decoded = jwt.decode(token, options={"verify_signature": False})
+        fid = decoded.get('fid')
+    except:
+        return deny_access()
+    
+    # Map FID to LOB
+    lob = get_lob_for_fid(fid)
+    
+    # Return policy with enriched context
+    return {
+        "principalId": fid,
+        "policyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [{
+                "Action": "execute-api:Invoke",
+                "Effect": "Allow",
+                "Resource": event['methodArn']
+            }]
+        },
+        "context": {
+            "fid": fid,
+            "lob": lob
+        }
+    }
+
+
+FID_LOB_MAP = {
+    "FID001": "RETAIL",
+    "FID002": "CORPORATE",
+    "FID003": "INSURANCE"
+}
+
+def get_lob_for_fid(fid):
+    return FID_LOB_MAP.get(fid, "UNKNOWN")
